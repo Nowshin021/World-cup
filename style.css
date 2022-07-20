@@ -1,7 +1,6 @@
 body{
-    
-    
-    font-family: 'Poppins';
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 main{
     display: flex;
@@ -34,6 +33,9 @@ main{
    flex-direction: column;
    
 }
+.banner-item{
+    padding-left: 35px;
+}
 .banner-item h1{
     font-size: 50px;
 }
@@ -46,23 +48,24 @@ main{
     border: none;
     color: white;
     font-size: 20px;
-    transition: 2.5s ease-in-out;
+    transition: 1s ease-in-out;
+    transform:  scale(1)
 }
 
 .main-button:hover {
-    background-color: #000000;
-    color: white;
+    background-color: white;
+    color:#DD0000;
+    transform:  scale(0.8);
+
   }
 
-  /*Game section styles*/
+/*Game section styles*/
 
 .games-section{
     width: 1200px;
     margin-top: 21px;
     padding:30px ;
-   
     border-radius: 30px;
-    
     margin-bottom: 21px;
   
 }
@@ -148,7 +151,10 @@ main{
 .game-timimg p{
     color: #000000;
 }
+
+
 /*match styles*/
+
 .match-card{
     border: 2px solid rgb(184, 183, 183);
     width: 280px;
@@ -177,8 +183,41 @@ main{
     text-align: center;
 
 }
+/**Hidden button**/
 
-/*footer*/
+
+
+.hidden-button-area{
+    padding-top: 20px;
+    text-align: center;
+    
+}
+
+.secret-button{
+    border: none;
+    border-radius: 5px;
+    background-color: #DD0000;
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    visibility: hidden;
+    transition: 1s ease-in-out;
+    transform:  scale(1)
+}
+.secret-button:hover {
+    background-color: white;
+    color:#DD0000;
+    transform:  scale(1.5);
+    border: 1px solid red;
+
+  }
+
+
+
+
+/*footer styles*/
+
+
 footer{
     width: 100%;
     height:  300px;
@@ -206,6 +245,7 @@ footer{
     font-size: 15px;
     padding: 10px;
 }
+
 
 /*media queries*/
 
@@ -364,6 +404,11 @@ footer{
     .games{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+    }
+
+
+    .secret-button{
+        visibility:visible;
     }
 
     footer{
